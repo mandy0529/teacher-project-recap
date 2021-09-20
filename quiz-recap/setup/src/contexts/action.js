@@ -1,0 +1,9 @@
+export const LOADING = 'loading';
+export const WAITING = 'waiting';
+export const GET_DATA = 'get-data';
+export const ALERT = 'alert';
+export const OPEN_MODAL = 'open-modal';
+export const CLOSE_MODAL = 'close-modal';
+export const HANDLE_INDEX = 'handle-index';
+export const CHOOSE_QUIZ = 'choose-quiz';
+export const HANDLE_SCORE = 'handle-score';

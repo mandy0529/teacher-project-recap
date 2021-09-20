@@ -1,11 +1,18 @@
-import React from 'react'
-import { useGlobalContext } from './context'
+import React from 'react';
+import Loading from './components/Loading';
+import Quiz from './components/Quiz';
+import SetupForm from './components/SetupForm';
+import {useGlobalContext} from './contexts/context';
 
-import SetupForm from './SetupForm'
-import Loading from './Loading'
-import Modal from './Modal'
 function App() {
-  return <h2>quiz starter</h2>
+  const {loading, waiting, questions, index} = useGlobalContext();
+  if (loading) {
+    return <Loading />;
+  }
+  if (waiting) {
+    return <SetupForm />;
+  }
+  return <Quiz {...questions[index]} />;
 }
 
-export default App
+export default App;
